@@ -1,0 +1,22 @@
+ja:
+  time:
+    formats:
+      short: "%Y/%m/%d %H:%M" # 例: 2024/09/27 14:05
+      long: "%Y年%m月%d日 %H時%M分%S秒"
+  date:
+    formats:
+      short: "%Y/%m/%d"        # 例: 2024/09/27
+      long: "%Y年%m月%d日"
+  activerecord:
+    errors:
+      messages:
+        record_invalid: "バリデーションに失敗しました。"
+        restrict_dependent_destroy:
+          has_one: "%{record}を削除できません。1つの依存関係があります。"
+          has_many: "%{record}を削除できません。%{count}つの依存関係があります。"
+        too_long: "は%{count}文字以内で入力してください。"
+        too_short: "は%{count}文字以上で入力してください。"
+        blank: "を入力してください。"
+        taken: "はすでに存在します。"
+        invalid: "は不正な値です。"
+      

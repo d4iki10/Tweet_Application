@@ -1,0 +1,13 @@
+<h2>つぶやき一覧</h2>
+<% @posts.each do |post| %>
+    <div>
+        <p>現在のロケール: <%= I18n.locale %></p>
+        <p><%= post.content %></p>
+        <small><%= l(post.created_at, format: :short) %></small>
+        <div>
+            <%= link_to '編集', edit_post_path(post) %>
+            <%= link_to '削除', post_path(post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' %>
+        </div>
+    </div>
+    <hr>
+<% end %>

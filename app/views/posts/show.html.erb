@@ -1,0 +1,9 @@
+<!-- app/views/posts/show.html.erb -->
+<h2>つぶやき詳細</h2>
+<p><%= @post.content %></p>
+<small>投稿日: <%= @post.created_at.strftime("%Y-%m-%d %H:%M:%S") %></small>
+<div>
+    <%= link_to '編集', edit_post_path(@post), class: 'btn btn-primary' %>
+    <%= link_to '削除', post_path(@post), method: :delete, data: { confirm: '本当に削除しますか？' }, class: 'btn btn-danger' %>
+</div>
+<%= link_to '戻る', posts_path, class: 'btn btn-secondary' %>
